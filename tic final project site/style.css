@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #001011;
+    color: #e4e4e4;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes neonGlow {
+    0% { text-shadow: 0 0 6px #00eaff, 0 0 12px #00eaff; }
+    100% { text-shadow: 0 0 12px #00eaff, 0 0 24px #00eaff; }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(to right, #0a0a0a, #00191b, #0a0a0a);
+    box-shadow: 0 0 25px rgba(0,255,255,0.15);
+}
+
+header h1 {
+    color: #00eaff;
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+    animation: neonGlow 1s infinite alternate;
+}
+
+section {
+    width: 100%;
+    padding: 80px 14%;
+    animation: fadeUp 0.6s ease forwards;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #00eaff;
+    text-shadow: 0 0 6px #00eaff;
+}
+
+.expand-card {
+    background: #00191b;
+    padding: 22px;
+    margin: 18px 0;
+    border-radius: 12px;
+    border-left: 3px solid #00eaff;
+    box-shadow: 0 0 12px rgba(0,255,255,0.07);
+    cursor: pointer;
+    transition: 0.35s ease;
+}
+
+.expand-card-title {
+    font-weight: 600;
+    color: #00eaff;
+    font-size: 1.15rem;
+}
+
+.expand-card-content {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: 0.35s ease;
+    color: #d7d7d7;
+    line-height: 1.65;
+}
+
+.expand-card:hover {
+    background: #001011;
+    box-shadow: 0 0 20px rgba(0,255,255,0.25);
+    padding-bottom: 45px;
+}
+
+.expand-card:hover .expand-card-content {
+    max-height: 300px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+ul {
+    padding-left: 20px;
+}
+
+footer {
+    background: #000808;
+    padding: 45px 14%;
+    
+    
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-references h3 {
+    color: #00eaff;
+    margin-bottom: 10px;
+}
+
+.footer-references ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-references li {
+    font-size: 0.95rem;
+    color: #cfcfcf;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 14px;
+}
+
+.footer-references li::before {
+    content: "•";
+    color: #00eaff;
+    position: absolute;
+    left: 0;
+}
+
+.footer-copy {
+    text-align: center;
+    color: #00eaff;
+    font-size: 0.9rem;
+}
